@@ -3,7 +3,7 @@ node{
      git credentialsId: 'Mygit-creds', url: 'https://github.com/ashoksanem/jenkins_test'
     }
   stage('Mvn Package'){
-      sh label: '', script: 'mvn  clean  deploy'
+      sh label: '', script: 'mvn  clean  package'
   }
   stage('Build Docker Imager'){
    sh 'sudo docker build -t gcr.io/jenkins-250111/tomcat . '
